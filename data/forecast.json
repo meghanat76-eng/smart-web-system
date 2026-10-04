@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-10-04T13:29:20.592692",
+  "algorithm": "EWMA_LinearTrend_Hybrid (alpha=0.65)",
+  "summary": {
+    "total_zones": 8,
+    "overloaded_count": 3,
+    "available_count": 5,
+    "total_grid_capacity_mw": 960.0,
+    "total_grid_current_mw": 685.0,
+    "total_grid_forecast_mw": 698.11,
+    "grid_utilization_current_pct": 71.35,
+    "grid_utilization_forecast_pct": 72.72,
+    "overloaded_zones": [
+      "A",
+      "C",
+      "G"
+    ],
+    "available_zones": [
+      "B",
+      "D",
+      "E",
+      "F",
+      "H"
+    ]
+  },
+  "zones": {
+    "A": {
+      "current_load_mw": 110.0,
+      "current_load_percentage": 91.67,
+      "forecasted_load_mw": 113.63,
+      "forecasted_load_percentage": 94.69,
+      "capacity_mw": 120.0,
+      "headroom_mw": 6.37,
+      "risk_level": "CRITICAL_OVERLOAD",
+      "recommended_action": "URGENT: Shift at least 17.6 MW to an adjacent zone.",
+      "zone_id": "A",
+      "zone_name": "Zone A (Downtown Core)",
+      "sector": "Sector-1 (North)"
+    },
+    "B": {
+      "current_load_mw": 55.0,
+      "current_load_percentage": 55.0,
+      "forecasted_load_mw": 56.03,
+      "forecasted_load_percentage": 56.03,
+      "capacity_mw": 100.0,
+      "headroom_mw": 43.97,
+      "risk_level": "NORMAL",
+      "recommended_action": "AVAILABLE: Has 43.97 MW headroom; can receive transferred load.",
+      "zone_id": "B",
+      "zone_name": "Zone B (West Tech Park)",
+      "sector": "Sector-1 (North)"
+    },
+    "C": {
+      "current_load_mw": 138.0,
+      "current_load_percentage": 92.0,
+      "forecasted_load_mw": 139.95,
+      "forecasted_load_percentage": 93.3,
+      "capacity_mw": 150.0,
+      "headroom_mw": 10.05,
+      "risk_level": "CRITICAL_OVERLOAD",
+      "recommended_action": "URGENT: Shift at least 19.9 MW to an adjacent zone.",
+      "zone_id": "C",
+      "zone_name": "Zone C (North Industrial)",
+      "sector": "Sector-1 (North)"
+    },
+    "D": {
+      "current_load_mw": 62.0,
+      "current_load_percentage": 56.36,
+      "forecasted_load_mw": 63.3,
+      "forecasted_load_percentage": 57.55,
+      "capacity_mw": 110.0,
+      "headroom_mw": 46.7,
+      "risk_level": "NORMAL",
+      "recommended_action": "AVAILABLE: Has 46.7 MW headroom; can receive transferred load.",
+      "zone_id": "D",
+      "zone_name": "Zone D (East Residential)",
+      "sector": "Sector-1 (North)"
+    },
+    "E": {
+      "current_load_mw": 80.0,
+      "current_load_percentage": 61.54,
+      "forecasted_load_mw": 81.3,
+      "forecasted_load_percentage": 62.54,
+      "capacity_mw": 130.0,
+      "headroom_mw": 48.7,
+      "risk_level": "NORMAL",
+      "recommended_action": "AVAILABLE: Has 48.7 MW headroom; can receive transferred load.",
+      "zone_id": "E",
+      "zone_name": "Zone E (South Port Basin)",
+      "sector": "Sector-2 (South)"
+    },
+    "F": {
+      "current_load_mw": 50.0,
+      "current_load_percentage": 55.56,
+      "forecasted_load_mw": 51.3,
+      "forecasted_load_percentage": 57.0,
+      "capacity_mw": 90.0,
+      "headroom_mw": 38.7,
+      "risk_level": "NORMAL",
+      "recommended_action": "AVAILABLE: Has 38.7 MW headroom; can receive transferred load.",
+      "zone_id": "F",
+      "zone_name": "Zone F (Metro Suburb)",
+      "sector": "Sector-2 (South)"
+    },
+    "G": {
+      "current_load_mw": 122.0,
+      "current_load_percentage": 87.14,
+      "forecasted_load_mw": 123.3,
+      "forecasted_load_percentage": 88.07,
+      "capacity_mw": 140.0,
+      "headroom_mw": 16.7,
+      "risk_level": "OVERLOAD_WARNING",
+      "recommended_action": "MONITOR: Zone approaching peak capacity limit; prepare transfer routes.",
+      "zone_id": "G",
+      "zone_name": "Zone G (Heavy Manufacturing)",
+      "sector": "Sector-2 (South)"
+    },
+    "H": {
+      "current_load_mw": 68.0,
+      "current_load_percentage": 56.67,
+      "forecasted_load_mw": 69.3,
+      "forecasted_load_percentage": 57.75,
+      "capacity_mw": 120.0,
+      "headroom_mw": 50.7,
+      "risk_level": "NORMAL",
+      "recommended_action": "AVAILABLE: Has 50.7 MW headroom; can receive transferred load.",
+      "zone_id": "H",
+      "zone_name": "Zone H (University Campus)",
+      "sector": "Sector-2 (South)"
+    }
+  }
+}

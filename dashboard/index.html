@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Grid Load Balancer - Control Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <div class="brand">
+                <div class="logo-icon">⚡</div>
+                <div>
+                    <h1>Smart Grid Load Balancer</h1>
+                    <span class="subtext">Academic Engineering System • ADSA Unit 2 | OOPJ | Python</span>
+                </div>
+            </div>
+            <div class="status-pill">
+                <span class="pulse-dot"></span>
+                <span>SYSTEM LIVE: 8 MICROGRID ZONES</span>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <!-- KPI Overview Cards -->
+            <section class="kpi-grid">
+                <div class="kpi-card">
+                    <span class="kpi-label">TOTAL ZONES</span>
+                    <span class="kpi-val" id="valTotalZones">8</span>
+                    <span class="kpi-sub">Partitioned (2 Sectors)</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-label">TOTAL GRID LOAD</span>
+                    <span class="kpi-val" id="valTotalLoad">685.0 MW</span>
+                    <span class="kpi-sub">Capacity: 960.0 MW (71.3%)</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-label">AVERAGE UTILIZATION</span>
+                    <span class="kpi-val" id="valAvgLoad">71.35%</span>
+                    <span class="kpi-sub">Nominal Safe Margin</span>
+                </div>
+                <div class="kpi-card alert">
+                    <span class="kpi-label">OVERLOADED ZONES</span>
+                    <span class="kpi-val text-red" id="valOverloaded">2 Critical</span>
+                    <span class="kpi-sub">Zone A (91.7%), Zone C (92.0%)</span>
+                </div>
+                <div class="kpi-card success">
+                    <span class="kpi-label">AVAILABLE HEADROOM</span>
+                    <span class="kpi-val text-green" id="valHeadroom">275.0 MW</span>
+                    <span class="kpi-sub">Zone B, D, F, H ready</span>
+                </div>
+            </section>
+
+            <!-- Control Action Toolbar -->
+            <div class="toolbar">
+                <button class="btn btn-primary" id="btnRunSim">▶ Run Java Simulation</button>
+                <button class="btn btn-purple" id="btnRunForecast">🐍 Generate Python Forecast</button>
+                <button class="btn btn-amber" id="btnBalanceLoad">⚖️ Execute Load Balancer</button>
+                <button class="btn btn-secondary" id="btnResetGrid">↺ Reset Simulation</button>
+            </div>
+
+            <!-- Grid & Graph View Section -->
+            <div class="grid-two-col">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>ADSA Unit 2: Smart Grid Topology Graph</h2>
+                        <span class="badge">Divide & Conquer Partition</span>
+                    </div>
+                    <div class="graph-container" id="graphContainer">
+                        <!-- SVG Topology rendered by script.js -->
+                    </div>
+                    <div class="topology-legend">
+                        <span class="legend-item"><span class="dot normal"></span> Normal (&lt;80%)</span>
+                        <span class="legend-item"><span class="dot warning"></span> Warning (80-90%)</span>
+                        <span class="legend-item"><span class="dot critical"></span> Overloaded (&gt;90%)</span>
+                        <span class="legend-item"><span class="line-sample"></span> Cut Edges (Inter-Sector)</span>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>Zone Load & Forecast Analytics</h2>
+                        <span class="badge">EWMA Forecast</span>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table" id="zoneTable">
+                            <thead>
+                                <tr>
+                                    <th>Zone</th>
+                                    <th>Sector</th>
+                                    <th>Capacity</th>
+                                    <th>Current</th>
+                                    <th>Forecast</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="zoneTableBody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transfer Activity Logs & Academic Mapping -->
+            <div class="grid-two-col">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>OOPJ Load Transfer Transaction Log</h2>
+                        <span class="badge">Safe Shift Audit</span>
+                    </div>
+                    <div class="log-list" id="transferLogList">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>Academic Concept Mapping</h2>
+                        <span class="badge">ADSA • OOPJ • Python</span>
+                    </div>
+                    <div class="academic-cards">
+                        <div class="academic-item">
+                            <h3>1. ADSA – Unit 2 (Graph Theory & Divide and Conquer)</h3>
+                            <p>Grid modelled as an undirected graph G = (V, E) with Adjacency Matrix and Adjacency List. Divide-and-Conquer bipartitions the 8 zones into North (A, B, C, D) and South (E, F, G, H) clusters to reduce cross-sector transmission bottlenecks.</p>
+                        </div>
+                        <div class="academic-item">
+                            <h3>2. OOPJ (Java Object-Oriented Simulation)</h3>
+                            <p>Encapsulated entities: Grid, Zone, Substation, Connection, LoadData, LoadTransfer, LoadBalancer. Demonstrates Abstraction (GridEntity), Inheritance, Polymorphism (status logic), and custom Exception handling.</p>
+                        </div>
+                        <div class="academic-item">
+                            <h3>3. Python (Data Processing & Forecasting)</h3>
+                            <p>Reads CSV data, computes Exponential Weighted Moving Average (EWMA) and linear trend extrapolation to predict load spikes before thermal limits are reached.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Floating Smart Grid Assistant Chatbot UI -->
+        <aside class="chatbot-drawer" id="chatbotDrawer">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <span class="bot-avatar">🤖</span>
+                    <div>
+                        <h3>Smart Grid Assistant</h3>
+                        <span class="online-indicator">Python Intent Engine</span>
+                    </div>
+                </div>
+                <button class="btn-icon" id="btnClearChat" title="Clear Chat">🗑️</button>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="msg assistant">
+                    <div class="msg-bubble">
+                        Hello! I am your Smart Grid Assistant, powered by Python. I monitor zone loads, forecasts, and balancing decisions. How can I assist you today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-suggestions">
+                <button class="chip" data-q="Which zone is overloaded?">Which zone is overloaded?</button>
+                <button class="chip" data-q="Show forecast">Show forecast</button>
+                <button class="chip" data-q="Show available capacity">Show available capacity</button>
+                <button class="chip" data-q="Why was load transferred?">Why was load transferred?</button>
+                <button class="chip" data-q="Show grid status">Show grid status</button>
+            </div>
+
+            <form class="chat-input-row" id="chatForm">
+                <input type="text" id="chatInput" placeholder="Ask about load, forecasts, or transfers..." autocomplete="off">
+                <button type="submit" class="btn-send">Send</button>
+            </form>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

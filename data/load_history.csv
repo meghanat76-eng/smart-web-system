@@ -1,0 +1,49 @@
+Timestamp,ZoneId,ZoneName,Sector,CapacityMW,LoadMW,LoadPercentage,SubstationCount
+2026-10-04 00:00:00,A,Zone A (Downtown Core),Sector-1 (North),120.0,65.0,54.17,4
+2026-10-04 04:00:00,A,Zone A (Downtown Core),Sector-1 (North),120.0,58.0,48.33,4
+2026-10-04 08:00:00,A,Zone A (Downtown Core),Sector-1 (North),120.0,88.0,73.33,4
+2026-10-04 12:00:00,A,Zone A (Downtown Core),Sector-1 (North),120.0,99.0,82.50,4
+2026-10-04 16:00:00,A,Zone A (Downtown Core),Sector-1 (North),120.0,105.0,87.50,4
+2026-10-04 18:00:00,A,Zone A (Downtown Core),Sector-1 (North),120.0,110.0,91.67,4
+2026-10-04 00:00:00,B,Zone B (West Tech Park),Sector-1 (North),100.0,42.0,42.00,3
+2026-10-04 04:00:00,B,Zone B (West Tech Park),Sector-1 (North),100.0,38.0,38.00,3
+2026-10-04 08:00:00,B,Zone B (West Tech Park),Sector-1 (North),100.0,48.0,48.00,3
+2026-10-04 12:00:00,B,Zone B (West Tech Park),Sector-1 (North),100.0,52.0,52.00,3
+2026-10-04 16:00:00,B,Zone B (West Tech Park),Sector-1 (North),100.0,54.0,54.00,3
+2026-10-04 18:00:00,B,Zone B (West Tech Park),Sector-1 (North),100.0,55.0,55.00,3
+2026-10-04 00:00:00,C,Zone C (North Industrial),Sector-1 (North),150.0,85.0,56.67,5
+2026-10-04 04:00:00,C,Zone C (North Industrial),Sector-1 (North),150.0,92.0,61.33,5
+2026-10-04 08:00:00,C,Zone C (North Industrial),Sector-1 (North),150.0,120.0,80.00,5
+2026-10-04 12:00:00,C,Zone C (North Industrial),Sector-1 (North),150.0,132.0,88.00,5
+2026-10-04 16:00:00,C,Zone C (North Industrial),Sector-1 (North),150.0,135.0,90.00,5
+2026-10-04 18:00:00,C,Zone C (North Industrial),Sector-1 (North),150.0,138.0,92.00,5
+2026-10-04 00:00:00,D,Zone D (East Residential),Sector-1 (North),110.0,45.0,40.91,3
+2026-10-04 04:00:00,D,Zone D (East Residential),Sector-1 (North),110.0,39.0,35.45,3
+2026-10-04 08:00:00,D,Zone D (East Residential),Sector-1 (North),110.0,55.0,50.00,3
+2026-10-04 12:00:00,D,Zone D (East Residential),Sector-1 (North),110.0,58.0,52.73,3
+2026-10-04 16:00:00,D,Zone D (East Residential),Sector-1 (North),110.0,60.0,54.55,3
+2026-10-04 18:00:00,D,Zone D (East Residential),Sector-1 (North),110.0,62.0,56.36,3
+2026-10-04 00:00:00,E,Zone E (South Port Basin),Sector-2 (South),130.0,60.0,46.15,4
+2026-10-04 04:00:00,E,Zone E (South Port Basin),Sector-2 (South),130.0,55.0,42.31,4
+2026-10-04 08:00:00,E,Zone E (South Port Basin),Sector-2 (South),130.0,72.0,55.38,4
+2026-10-04 12:00:00,E,Zone E (South Port Basin),Sector-2 (South),130.0,76.0,58.46,4
+2026-10-04 16:00:00,E,Zone E (South Port Basin),Sector-2 (South),130.0,78.0,60.00,4
+2026-10-04 18:00:00,E,Zone E (South Port Basin),Sector-2 (South),130.0,80.0,61.54,4
+2026-10-04 00:00:00,F,Zone F (Metro Suburb),Sector-2 (South),90.0,35.0,38.89,3
+2026-10-04 04:00:00,F,Zone F (Metro Suburb),Sector-2 (South),90.0,30.0,33.33,3
+2026-10-04 08:00:00,F,Zone F (Metro Suburb),Sector-2 (South),90.0,42.0,46.67,3
+2026-10-04 12:00:00,F,Zone F (Metro Suburb),Sector-2 (South),90.0,46.0,51.11,3
+2026-10-04 16:00:00,F,Zone F (Metro Suburb),Sector-2 (South),90.0,48.0,53.33,3
+2026-10-04 18:00:00,F,Zone F (Metro Suburb),Sector-2 (South),90.0,50.0,55.56,3
+2026-10-04 00:00:00,G,Zone G (Heavy Manufacturing),Sector-2 (South),140.0,90.0,64.29,5
+2026-10-04 04:00:00,G,Zone G (Heavy Manufacturing),Sector-2 (South),140.0,94.0,67.14,5
+2026-10-04 08:00:00,G,Zone G (Heavy Manufacturing),Sector-2 (South),140.0,112.0,80.00,5
+2026-10-04 12:00:00,G,Zone G (Heavy Manufacturing),Sector-2 (South),140.0,118.0,84.29,5
+2026-10-04 16:00:00,G,Zone G (Heavy Manufacturing),Sector-2 (South),140.0,120.0,85.71,5
+2026-10-04 18:00:00,G,Zone G (Heavy Manufacturing),Sector-2 (South),140.0,122.0,87.14,5
+2026-10-04 00:00:00,H,Zone H (University Campus),Sector-2 (South),120.0,48.0,40.00,4
+2026-10-04 04:00:00,H,Zone H (University Campus),Sector-2 (South),120.0,42.0,35.00,4
+2026-10-04 08:00:00,H,Zone H (University Campus),Sector-2 (South),120.0,60.0,50.00,4
+2026-10-04 12:00:00,H,Zone H (University Campus),Sector-2 (South),120.0,64.0,53.33,4
+2026-10-04 16:00:00,H,Zone H (University Campus),Sector-2 (South),120.0,66.0,55.00,4
+2026-10-04 18:00:00,H,Zone H (University Campus),Sector-2 (South),120.0,68.0,56.67,4
